@@ -77,7 +77,7 @@ void setup() {
   //Combination of Population of Image with Population of Rect()
   //Adjust Image Variables for Aspect Ratio: entire image will be smaller due to aspect ratio
   picWidthAdjusted1 = imageWidth1 * imageWidthRatio1;
-  picHeightAdjusted1 = imageHeight1 * imageHeightRatio1;
+  picHeightAdjusted1 = imageHeight1; //* imageHeightRatio1
   println(imageX1, imageY1, picWidthAdjusted1, picHeightAdjusted1); //Note: println() also verifies decimal places, complier will truncate
   picWidthAdjusted2 = imageWidth2 * imageWidthRatio2;
   picHeightAdjusted2 = imageHeight2; //* imageHeightRatio2
