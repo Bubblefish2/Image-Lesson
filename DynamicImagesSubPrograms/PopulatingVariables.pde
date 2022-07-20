@@ -1,5 +1,4 @@
 //Global Variable
-PImage pic1, pic2;
 float imageX1, imageY1, imageWidth1, imageHeight1, imageLargerDimension1, imageSmallerDimension1, imageWidthRatio1=0.0, imageHeightRatio1=0.0;
 float picWidthAdjusted1, picHeightAdjusted1;
 float imageX2, imageY2, imageWidth2, imageHeight2, imageLargerDimension2, imageSmallerDimension2, imageWidthRatio2=0.0, imageHeightRatio2=0.0;
@@ -7,10 +6,7 @@ float picWidthAdjusted2, picHeightAdjusted2;
 boolean widthLarger1=false, heightLarger1=false;
 boolean widthLarger2=false, heightLarger2=false;
 //
-void setup() {
-  //CANVAS
-  size(750, 500); //Landscape
-  //
+void populatingVariables() {
   //Population of Image
   pic1 = loadImage("../Images Used/Landscape & Square Images/delfin-bananas-1737840_960_720.jpg"); //Dimensions: width 960, height 720
   pic2 = loadImage("../Images Used/Landscape & Square Images/brown macarons 1920_1280.jpg"); //Dimensions: width 1920, height 1280
@@ -83,17 +79,4 @@ void setup() {
   picHeightAdjusted2 = imageHeight2; //* imageHeightRatio2
   println(imageX2, imageY2, picWidthAdjusted2, picHeightAdjusted2); //Note: println() also verifies decimal places, complier will truncate
   //
-} //End setup()
-//
-void draw() {
-  //rect(imageX1, imageY1, imageWidth1, imageHeight1); //Top Half of CANVAS
-  //rect(imageX2, imageY2, imageWidth2, imageHeight2); //Bottom Half of CANVAS
-  image(pic1, imageX1, imageY1, picWidthAdjusted1, picHeightAdjusted1);
-  image(pic2, imageX2, imageY2, picWidthAdjusted2, picHeightAdjusted2);
-}//End draw
-//
-//void keyPressed() {}//End keyPressed
-//
-//void mousePressed() {}//End mousePressed
-//
-//End MAIN Program
+} //End populatingVariables
