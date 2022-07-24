@@ -29,10 +29,14 @@ void setup() {
   //Aspect Ratio
   //Note: single line IFs can be summarized into IF-ELSE or IF-ElseIF-Else
   //Computer chooses which formulae to execute
-  if ( widthLarger == true ) imageWidthRatio = imageLargerDimension / imageLargerDimension;
-  if ( widthLarger == true ) imageHeightRatio = imageSmallerDimension / imageLargerDimension;
-  if ( heightLarger == true ) imageWidthRatio = imageSmallerDimension / imageLargerDimension;
-  if ( heightLarger == true ) imageHeightRatio = imageLargerDimension / imageLargerDimension;
+  if ( widthLarger == true ) {
+    imageWidthRatio = imageLargerDimension / imageLargerDimension;
+    imageHeightRatio = imageSmallerDimension / imageLargerDimension;
+  }
+  if ( heightLarger == true ) {
+    imageWidthRatio = imageSmallerDimension / imageLargerDimension;
+    imageHeightRatio = imageLargerDimension / imageLargerDimension;
+  }
   //Note:
   //Answers must be 1.0 and between 0 & 1 (decimal)
   //Ratio 1.0 similar to style="width:100%" (websites)
